@@ -8,7 +8,7 @@ def add_goal(request):
     if request.method == 'POST':
         form = GoalForm(request.POST)
         if form.is_valid():
-            goal=form.save()
+            goal = form.save(commit=False)
             goal.owner=request.user
             goal.save()
             return redirect('list_goals')
