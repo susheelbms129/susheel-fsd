@@ -31,6 +31,16 @@ data = pd.read_csv('dataset.csv')
 
 # Preprocessing
 
+import nltk
+
+# Add the custom NLTK data path for Render
+nltk.data.path.append("/opt/render/project/src/nltk_data")
+
+# Now proceed with using NLTK
+from nltk.tokenize import word_tokenize
+
+# Your tokenization and other NLTK-related code
+
 
 
 stop_words = set(stopwords.words('english'))
