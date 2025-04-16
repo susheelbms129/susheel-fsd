@@ -36,6 +36,15 @@ import nltk
 # Add the custom NLTK data path for Render
 nltk.data.path.append("/opt/render/project/src/nltk_data")
 
+
+nltk.download('punkt')  # General tokenizer
+nltk.download('punkt_tab')  # For punkt_tab tokenizer (if needed)
+
+
+
+
+
+
 # Now proceed with using NLTK
 from nltk.tokenize import word_tokenize
 
