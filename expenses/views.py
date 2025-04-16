@@ -30,6 +30,17 @@ from django.conf import settings
 data = pd.read_csv('dataset.csv')
 
 # Preprocessing
+
+import nltk
+nltk.data.path.append("nltk_data")  # Add your nltk data path
+
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+
+
+
+
+
 stop_words = set(stopwords.words('english'))
 
 def preprocess_text(text):
