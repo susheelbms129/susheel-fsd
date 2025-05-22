@@ -161,9 +161,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'hemantshirsath24@gmail.com'
-EMAIL_HOST_PASSWORD = 'gjxu zgem wvtv vklu'
-DEFAULT_FROM_EMAIL = 'hemantshirsath24@gmail.com'
+EMAIL_HOST_USER = 'susheeljog3@gmail.com'
+EMAIL_HOST_PASSWORD = 'jmqo zhjl noqf bpnx'
+DEFAULT_FROM_EMAIL = 'susheeljog3@gmail.com'
 
 CELERY_BROKER_URL = 'redis://localhost:6379/0'
 CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
