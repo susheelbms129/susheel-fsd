@@ -32,28 +32,74 @@ data = pd.read_csv('dataset.csv')
 # Preprocessing
 
 import nltk
+##########################################################################################################33333333
+# # Add the custom NLTK data path for Render
+# nltk.data.path.append("/opt/render/project/src/nltk_data")
+
+
+# nltk.download('punkt')  # General tokenizer
+# nltk.download('punkt_tab')  # For punkt_tab tokenizer (if needed)
+
+
+
+# # Now proceed with using NLTK
+# from nltk.tokenize import word_tokenize
+
+# # Your tokenization and other NLTK-related code
+
+
+
+# stop_words = set(stopwords.words('english'))
+#######################################################################################################################
+
 
 # Add the custom NLTK data path for Render
-nltk.data.path.append("/opt/render/project/src/nltk_data")
+nltk_data_dir = os.path.join(os.path.dirname(__file__), 'nltk_data')
+nltk.data.path.append(nltk_data_dir)
 
+# Download resources if not already present (safe to include during dev)
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    nltk.download('stopwords', download_dir=nltk_data_dir)
 
-nltk.download('punkt')  # General tokenizer
-nltk.download('punkt_tab')  # For punkt_tab tokenizer (if needed)
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt', download_dir=nltk_data_dir)
 
-
-
-
-
-
-# Now proceed with using NLTK
-from nltk.tokenize import word_tokenize
-
-# Your tokenization and other NLTK-related code
-
-
-
+# Now safe to use stopwords
 stop_words = set(stopwords.words('english'))
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###################################################################################################################################33333
 def preprocess_text(text):
     tokens = word_tokenize(text.lower())
     tokens = [t for t in tokens if t.isalnum() and t not in stop_words]
