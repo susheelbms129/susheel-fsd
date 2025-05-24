@@ -33,23 +33,23 @@ data = pd.read_csv('dataset.csv')
 
 import nltk
 ##########################################################################################################33333333
-# # Add the custom NLTK data path for Render
-# nltk.data.path.append("/opt/render/project/src/nltk_data")
+# Add the custom NLTK data path for Render
+nltk.data.path.append("/opt/render/project/src/nltk_data")
 
 
-# nltk.download('punkt')  # General tokenizer
-# nltk.download('punkt_tab')  # For punkt_tab tokenizer (if needed)
-
-
-
-# # Now proceed with using NLTK
-# from nltk.tokenize import word_tokenize
-
-# # Your tokenization and other NLTK-related code
+nltk.download('punkt')  # General tokenizer
+nltk.download('punkt_tab')  # For punkt_tab tokenizer (if needed)
 
 
 
-# stop_words = set(stopwords.words('english'))
+# Now proceed with using NLTK
+from nltk.tokenize import word_tokenize
+
+# Your tokenization and other NLTK-related code
+
+
+
+stop_words = set(stopwords.words('english'))
 #######################################################################################################################
 
 
