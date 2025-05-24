@@ -53,23 +53,6 @@ import nltk
 #######################################################################################################################
 
 
-# Add the custom NLTK data path for Render
-nltk_data_dir = os.path.join(os.path.dirname(__file__), 'nltk_data')
-nltk.data.path.append(nltk_data_dir)
-
-# Download resources if not already present (safe to include during dev)
-try:
-    nltk.data.find('corpora/stopwords')
-except LookupError:
-    nltk.download('stopwords', download_dir=nltk_data_dir)
-
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt', download_dir=nltk_data_dir)
-
-# Now safe to use stopwords
-stop_words = set(stopwords.words('english'))
 
 
 
