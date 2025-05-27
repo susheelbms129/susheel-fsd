@@ -45,6 +45,51 @@
             text-decoration: none;
             display: block;
         }
+
+        /* Animate dropdown items popping up one after another with smooth color change */
+
+        .dropdown a.dropdown-content {
+            opacity: 0;
+            transform: translateY(10px) scale(0.9);
+            animation-fill-mode: forwards;
+            animation-name: dropdownFadeIn;
+            animation-duration: 0.4s;
+            animation-timing-function: ease-out;
+            animation-delay: 0s; /* will override individually below */
+            color: #333;
+            transition: color 0.5s ease;
+        }
+
+        /* Animate them sequentially */
+        .navbar li:hover .dropdown a.dropdown-content:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .navbar li:hover .dropdown a.dropdown-content:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .navbar li:hover .dropdown a.dropdown-content:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+
+        /* Hover color change on each dropdown item */
+        .dropdown a.dropdown-content:hover {
+            color: #007bff; /* smooth color change on hover */
+        }
+
+        /* Keyframes for fade in + pop */
+        @keyframes dropdownFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(10px) scale(0.9);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
     </style>
 </head>
 
