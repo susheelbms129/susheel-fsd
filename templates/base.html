@@ -63,6 +63,95 @@
         .sidebar-collapsed .content {
             margin: auto;
         }
+
+
+        /* --- ANIMATIONS ADDED HERE --- */
+
+        /* Animate sidebar nav items sequentially on page load */
+        #sidebar ul.components li.nav-item {
+            opacity: 0;
+            transform: translateX(-20px);
+            animation-fill-mode: forwards;
+            animation-name: navItemFadeIn;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-out;
+        }
+
+        /* Add delay for each nav item to appear one after another */
+        #sidebar ul.components li.nav-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        #sidebar ul.components li.nav-item:nth-child(2) {
+            animation-delay: 0.25s;
+        }
+
+        #sidebar ul.components li.nav-item:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        #sidebar ul.components li.nav-item:nth-child(4) {
+            animation-delay: 0.55s;
+        }
+
+        #sidebar ul.components li.nav-item:nth-child(5) {
+            animation-delay: 0.7s;
+        }
+
+        #sidebar ul.components li.nav-item:nth-child(6) {
+            animation-delay: 0.85s;
+        }
+
+        #sidebar ul.components li.nav-item:nth-child(7) {
+            animation-delay: 1s;
+        }
+
+        #sidebar ul.components li.nav-item:nth-child(8) {
+            animation-delay: 1.15s;
+        }
+
+        #sidebar ul.components li.nav-item:nth-child(9) {
+            animation-delay: 1.3s;
+        }
+
+        #sidebar ul.components li.nav-item:nth-child(10) {
+            animation-delay: 1.45s;
+        }
+
+        #sidebar ul.components li.nav-item:nth-child(11) {
+            animation-delay: 1.6s;
+        }
+
+        #sidebar ul.components li.nav-item:nth-child(12) {
+            animation-delay: 1.75s;
+        }
+
+        @keyframes navItemFadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Smooth color transition on nav links */
+        #sidebar ul.components li.nav-item a.nav-link {
+            color: #333;
+            transition: color 0.4s ease, background-color 0.4s ease;
+        }
+
+        /* On hover, change color and background smoothly and nicely */
+        #sidebar ul.components li.nav-item a.nav-link:hover {
+            color: #007bff;
+            /* nice blue */
+            background-color: rgba(0, 123, 255, 0.1);
+            /* subtle blue highlight */
+            border-radius: 4px;
+        }
     </style>
 </head>
 
