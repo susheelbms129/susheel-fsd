@@ -179,7 +179,7 @@ def add_expense(request):
             'category': predicted_category,
         }
 
-        update_url = 'http://127.0.0.1:8000/api/update-dataset/'
+        update_url = 'https://susheel-bms-fsd.onrender.com/api/update-dataset/'
         response = requests.post(update_url, json={'new_data': new_data})
 
         try:
